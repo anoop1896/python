@@ -1,0 +1,153 @@
+{% extends 'layout.html'%}
+{% block body%}
+
+<div class="container-fluid">
+      <!-- SELECT2 EXAMPLE -->
+      <div class="card card-default">
+        <span class="text-center">{{success}}</span>
+        <div class="card-header">
+          <h3 class="card-title">Add Observation</h3>
+          <div class="text-right"><a href="/observations" class="btn btn-primary btn-sm" title="View Info">Views</a></div>
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body">
+              <form method="POST" action="/addObservation" enctype="multipart/form-data">
+          <div class="row">
+            <div class="col-md-6">
+            
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Category</label>
+                <select class="form-control" name="category">
+                  <option value="">Select</option>
+                  <option value="Taxi/Parking">Taxi / Parking</option>
+                  <option value="Seating/Waiting Area">Seating / Waiting Area</option>
+                  <option value="Cleanliness/Hygiene">Cleanliness / Hygiene</option>
+                  <option value="Baggage/Lost&Found">Baggage/Lost & Found</option>
+                  <option value="Retail Shops/Food&Beverage">Retail Shops /Food & Beverage</option>
+                  <option value="Tolly/Amenities/Buggy/Wifi">Tolly/Amenities/Buggy/Wifi</option>
+                  <option value="Air Conditioning/Maintenance">Air Conditioning/Maintenance</option>
+                  <option value="Signages/Flight Display">Signages/Flight Display</option>
+                  <option value="Person with Disability">Person with Disability</option>
+                  <option value="Other">Other</option>
+                </select>
+                
+              </div>
+              </div>
+              <div class="col-md-6">
+              <div class="form-group">
+                <label>Priority</label>
+                <input type="text" name="priority" class="form-control">
+                
+              </div>
+            </div>            
+              </div>
+            </div>
+            <div class="col-md-6">
+            <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Target Date</label>
+                <input type="date" name="target_date" class="form-control">
+                 
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Location</label>
+                <input type="text" name="location" class="form-control">
+                 
+              </div>
+            </div>
+            </div>
+            </div>
+           
+             <div class="col-md-6">
+             <div class="row">
+
+             <div class="col-md-6">              
+              <div class="form-group">
+                <label>Department</label>
+                <select class="form-control" name="department_id">
+                  <option value="3">Select</option>
+                    {% for dep in departments%}
+                    <option value="{{dep[0]}}">{{dep[1]}}</option>                         
+                    {%endfor%}                          
+                </select>
+                 </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Responsibility (SPOC)</label>
+                <select class="form-control" class="responsibility">
+                  <option value="3">Select</option>
+                    {% for dep in departments%}
+                    <option value="{{dep[0]}}">{{dep[10]}}</option>                         
+                    {%endfor%} 
+                  
+                </select>
+                 
+              </div>
+            </div>            
+            </div>
+            </div>            
+            <div class="col-md-6">
+            <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Status</label>
+                <select class="form-control" name="status">
+                  <option value="Open">Open</option>
+                  <option value="In Progress">In Progress</option>
+                  <option value="Close">Close</option>
+                </select>
+                 
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>File to upload (1MB)</label>
+                <input type="file" name="file" class="form-control">
+              </div>
+            </div>
+            </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Shift</label>
+                <select name="shift" class="form-control">
+                  <option value="">Select</option>
+                  <option value="Day">Day</option>
+                  <option value="Night">Night</option>
+                </select>
+                
+                </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Description</label>
+                <textarea class="form-control" name="description"></textarea>
+                 
+              </div>
+            </div>
+             <div class="col-md-6">
+            </div>
+            <div class="col-md-6">
+              <div class="form-group text-right">                
+                <input type="submit" class="btn btn-primary" name="save" value="Save">
+              </div>
+            </div>
+          </div>
+        </form>
+        </div>
+
+      </div>
+      <!-- /.row -->
+    </div>
+
+  </div>
+  <!-- /.card -->        
+</div><!-- /.container-fluid -->
+
+{% endblock %}

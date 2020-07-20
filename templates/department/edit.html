@@ -1,0 +1,156 @@
+{% extends 'layout.html'%}
+{% block body%}
+{% extends 'layout.html'%}
+{% block body%}
+<div class="container-fluid">
+	<!-- SELECT2 EXAMPLE -->
+	<div class="card card-default">
+		<div class="card-header">
+			<h3 class="card-title">Update Department</h3>
+			<div class="text-right"><a href="/departments" class="btn btn-primary btn-sm" title="Add New">View</a></div>
+		</div>
+		<!-- /.card-header -->
+		<div class="card-body">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="row">
+						<div class="col-sm-12 col-md-6 ">
+							<form method="POST" action="">
+								
+								<div class="form-group">
+									<label class=" form-control-label">Department Name</label>
+									<div class="input-group">                 
+										<input type="text" class="form-control" name="name">
+									</div>
+									
+								</div>
+							</div>
+							<div class="col-sm-12 col-md-6 ">       
+								<div class="form-group">
+									<label class=" form-control-label">Location</label>
+									<div class="input-group">                 
+										<select name="location" class="form-control">
+											<option value="Delhi">Delhi</option>                        
+										</select>
+									</div>
+									s
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-12 col-md-6 ">
+						<div class="row">
+							<div class="col-sm-12 col-md-6 ">
+								<div class="form-group">
+									<label class=" form-control-label">SPOC Name</label>
+									<div class="input-group">                 
+										<input type="text" class="form-control" name="spoc_name">
+									</div>
+									
+								</div>
+							</div>
+							<div class="col-sm-12 col-md-6 ">       
+								<div class="form-group">
+									<label class=" form-control-label">SPOC Email</label>
+									<div class="input-group">                 
+										<input type="email" class="form-control" name="spoc_mail">
+									</div>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-12 col-md-6 ">
+						<div class="row">
+							<div class="col-sm-12 col-md-6 ">
+								<div class="form-group">
+									<label class=" form-control-label">HOD Name</label>
+									<div class="input-group">                 
+										<input type="text" class="form-control" name="hod_name">
+									</div>
+									
+								</div>
+							</div>
+							<div class="col-sm-12 col-md-6 ">       
+								<div class="form-group">
+									<label class=" form-control-label">HOD Email</label>
+									<div class="input-group">                 
+										<input type="email" class="form-control" name="hod_mail">
+									</div>
+									
+								</div>
+							</div>
+						</div>
+					</div>  
+					
+					<div class="col-sm-12 col-md-6 ">
+						<div class="row">
+							<div class="col-sm-12 col-md-6 ">
+								<div class="form-group">
+									<label class=" form-control-label">CEO Name</label>
+									<div class="input-group">                 
+										<input type="text" class="form-control" name="ceo_name">
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-12 col-md-6 ">       
+								<div class="form-group">
+									<label class=" form-control-label">CEO Email</label>
+									<div class="input-group">                 
+										<input type="email" class="form-control" name="ceo_mail">
+									</div>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-12 col-md-6 ">
+						<div class="row">
+							<div class="col-sm-12 col-md-6 ">
+								<div class="form-group">
+									<label class=" form-control-label">Status</label>
+									<div class="input-group">                 
+										<select name="status" class="form-control">
+											<option value="1" selected>Active</option>
+											<option value="0">Deactive</option>
+										</select>
+									</div>
+									
+								</div>
+							</div>
+							<div class="col-sm-12 col-md-6 ">
+								<div class="form-group">
+									<label class=" form-control-label">Short Name</label>
+									<div class="input-group">                 
+										<input type="text" class="form-control" name="shortname">
+									</div>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-12 col-md-6">
+						<div class="form-group">
+							<label class=" form-control-label">Description</label>
+							<div class="input-group">                 
+								<textarea class="form-control" name="description"></textarea>
+							</div>
+							
+						</div>
+					</div>            
+					<div class="col-md-6">
+					</div>
+					<div class="col-md-6">
+						<div class="form-group text-right">                
+							<input type="submit" class="btn btn-primary" name="save" value="Save">
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<!-- /.row -->
+</div>
+{% endblock %}
+
+{% endblock %}

@@ -1,0 +1,90 @@
+{% extends 'layout.html'%}
+{% block body %}
+<div class="row">
+	<div class="col-sm-12 col-sm-12">
+		<div class="card">
+			<div class="card-header">
+				<strong class="card-title">Update Profile </strong>
+				
+			</div>				
+			<div class="card-body card-block">
+				<form method="post" action="" enctype="multipart/form-data">
+					
+					<input name="oldimage" type="hidden" value=""/>
+					<div class="row">
+						<div class="col-md-6 col-sm-12">
+							<div class="form-group">
+								<label class=" form-control-label">Name</label>
+								<div class="input-group">
+									<input type="text" class="form-control" name="name">
+								</div>
+								
+							</div>
+							<div class="row">
+								<div class="col-md-6 col-sm-12">
+									<div class="form-group">
+										<label class=" form-control-label">Email</label>
+										<div class="input-group">									
+											<input type="email" class="form-control" name="email" >
+										</div>
+										
+									</div>
+								</div>
+								<div class="col-md-6 col-sm-12">
+									<div class="form-group">
+										<label class=" form-control-label">Mobile</label>
+										<div class="input-group">									
+											<input type="text" class="form-control" name="mobile" >
+										</div>
+										
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6 col-sm-12">
+									<div class="form-group">
+										<label class=" form-control-label">Profile Image</label>
+										<div class="input-group">
+
+											<input type="file" name="file" class="form-control">
+										</div>
+										
+									</div>
+								</div>
+								
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-12">
+							<div class="form-group">
+								<label class=" form-control-label">OldPassword</label>
+								<div class="input-group">
+									<input type="password" name="oldpassword" class="form-control">
+								</div>
+								
+							</div>
+							<div class="form-group">
+								<label class=" form-control-label">Password</label>
+								<div class="input-group">
+									<input type="password" name="password" class="form-control">
+								</div>
+								
+							</div>
+							<div class="form-group">
+								<label class=" form-control-label">Confirm Password</label>
+								<div class="input-group">
+									<input type="password" name="confirm_password" class="form-control">
+								</div>								
+							</div>
+							<input type="submit" name="save" class="btn btn-info pull-right" value="Update">
+						</div>						
+					</div>						
+
+				</form>	
+
+			</div>
+
+		</div>
+	</div>
+</div>
+
+{% endblock %}

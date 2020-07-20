@@ -1,0 +1,36 @@
+{% extends 'layout.html'%}
+{% block body%}
+<div class="row">
+      <div class="col-12">
+
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Users List</h3>
+            <div class="text-right"><a href="/addUser" class="btn btn-primary btn-sm" title="Add New">Add New</a></div>
+          </div>
+          <!-- /.card-header -->
+          <div class="card-body">
+            <table id="example1" class="table table-bordered table-striped">
+              <thead>
+                <tr>
+                  <th>S.No.</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Department</th>
+                  <th>User Name</th>
+                  <th>Pic</th>
+                  <th>Type</th>                  
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody> 
+               </tbody>
+            </table>
+          </div>
+          <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+      </div>
+      <!-- /.col -->
+    </div>
+{% endblock %}
